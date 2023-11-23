@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #186d6b; /* Color de fondo para la barra de navegación */
+    background-color: #186d6b; 
   }
   
   .navegador .container-fluid {
@@ -17,7 +17,7 @@
   }
   
   .navegador .navbar-nav li {
-    margin: 0 10px; /* Ajusta el espaciado entre elementos según tus necesidades */
+    margin: 0 10px; 
   }
   #barraNavegador img {
     width: 300px;
@@ -31,7 +31,7 @@
 
   }
 
-  /* Estilos para los botones del carrusel */
+ 
 .carousel-control-prev,
 .carousel-control-next {
   
@@ -39,20 +39,19 @@
    
 }
 
-/* Estilo para el ícono del botón previo */
+
 .carousel-control-prev-icon {
-    background-color:black;; /* Cambia el color del ícono a tu preferencia */
+    background-color:black;; 
 }
 
-/* Estilo para el ícono del botón siguiente */
+
 .carousel-control-next-icon {
-    background-color: black;; /* Cambia el color del ícono a tu preferencia */
-}
+    background-color: black;;
 
 .videomp4 {
-    width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
-    max-width: 100%; /* Garantiza que el ancho máximo sea del 100% */
-    height: auto; /* La altura se ajusta automáticamente para mantener la proporción original */
+    width: 100%;
+    max-width: 100%; 
+    height: auto; 
 }
 
 #catalogo{
@@ -200,25 +199,25 @@
 
 
  @media only screen and (max-width: 767px) {
-    /* Estilos específicos para pantallas más pequeñas */
+   
 
     .videomp4 {
-        height: auto; /* Ajusta la altura automáticamente */
+        height: auto;
     }
 
     #barraNavegador img {
-        width: 150px; /* Ajusta el ancho de la imagen de la barra de navegación */
+        width: 150px; 
         height: 100px;
         margin-right: 5px;
     }
 
     #carruselImagenes img {
-        height: 400px; /* Ajusta la altura del carrusel en pantallas más pequeñas */
+        height: 400px; 
         margin-top: 10px;
     }
 
     .navbar-nav li {
-        margin: 0 5px; /* Ajusta el espaciado entre elementos del menú en pantallas más pequeñas */
+        margin: 0 5px; 
     }
 }
 
