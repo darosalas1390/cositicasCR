@@ -20,9 +20,7 @@
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)) 0;
     box-shadow: 0 0 50px rgba(102, 204, 255, 0.9), 0 0 50px rgba(102, 204, 255, 0.5);
     background-color: rgba(0, 0, 0, 0.8);
-    /* Ajusta el valor de "0.8" para cambiar la opacidad */
-    border-radius: 50px;
-  
+    border-radius: 50px;  
   }
   
   .flex-direction-flexFlow>.imagenSalud:hover {
@@ -39,11 +37,8 @@
     box-shadow: 0 0 50px rgba(102, 204, 255, 0.9), 0 0 50px rgba(102, 204, 255, 0.5);
     margin-top: 50px;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Ajusta el valor de "0.8" para cambiar la opacidad */
     border-radius: 50px;
-    transform: scale(1.1);
-    /* Hace que la imagen se haga un poco más grande al pasar el mouse por encima */
-  
+    transform: scale(1.1);  
   }
   
   
@@ -136,13 +131,13 @@
   }
 
   #whatsapp-icon {
-    font-size: 70px; /* Ajusta el tamaño del icono según tus preferencias */
-    color: green; /* Cambia el color del icono según tus preferencias */
+    font-size: 70px;
+    color: green; 
     cursor: pointer;
     text-align: center;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
-    right: 50%; /* Centra el icono horizontalmente */
-    z-index: 999; /* Asegura que el icono esté por encima de otros elementos */
+    bottom: 20px; 
+    right: 50%; 
+    z-index: 999; 
 }
 
 
@@ -151,16 +146,16 @@
 
   .flex-direction-flexFlow>.imagenSalud:hover {
       width: 80%;
-      max-width: 250px; /* Reduzco aún más el máximo para pantallas más pequeñas */
+      max-width: 250px; 
       height: auto;
       margin: 0 auto;
       transform: scale(1.1);
   }
 
   #whatsapp-icon {
-      font-size: 30px; /* Ajusta el tamaño del icono para dispositivos móviles */
+      font-size: 60px;
       bottom: 20px;
       right: 20px;
-      z-index: 999; /* Asegura que el icono esté por encima de otros elementos */
+      z-index: 999; 
   }
 }
