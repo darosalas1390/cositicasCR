@@ -188,7 +188,7 @@
 
                        
                         textoListaProductos += `\nTotal en Dólares: $${sumaTotalDolares.toFixed(2)}\n`;
-                        textoListaProductos += `Total en Colones: ₡${sumaTotalColones.toLocaleString('es-CR', { style: 'currency', currency: 'CRC' })}\n`;
+                        textoListaProductos += `Total en Colones: ${sumaTotalColones.toLocaleString('es-CR', { style: 'currency', currency: 'CRC' })}\n`;
 
                         
                         var enlaceWhatsApp = `https://wa.me/50670157905?text=${encodeURIComponent(textoListaProductos)}`;
