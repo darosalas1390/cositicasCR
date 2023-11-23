@@ -35,7 +35,7 @@
 .carousel-control-prev,
 .carousel-control-next {
   
-    color: black; /* Cambia el color del texto a tu preferencia */
+    color: black; 
    
 }
 
@@ -47,6 +47,7 @@
 
 .carousel-control-next-icon {
     background-color: black;;
+}
 
 .videomp4 {
     width: 100%;
@@ -127,7 +128,7 @@
     padding: 25px;
     text-align: left;
     color: white;
-  }s
+  }
   .footer {
       font-family: Georgia, "Times New Roman", Times, serif;
       text-align: left;
