@@ -1,0 +1,40 @@
+h1 {
+    color: #ff5f40;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+
+p1 {
+    text-align: center;
+    font-size: 28px;
+
+}
+
+.centrado {
+    text-align: center;
+}
+
+h1{
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+header{
+    margin-bottom: 71px;
+}
+
+
+.aparicion-izquierda-derecha {
+    animation: aparicionIzquierdaDerecha 1s ease-in-out; /* Ajusta la duración a tu preferencia */
+}
+
+@keyframes aparicionIzquierdaDerecha {
+    from {
+        transform: translateX(-100%); /* Desplazamiento desde la izquierda al principio */
+    }
+    to {
+        transform: translateX(0); /* Sin desplazamiento al final */
+    }
+}

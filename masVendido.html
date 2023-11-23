@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMG/IconoCositicasCR.jpg">
+    <title>CositicasCR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/vendido.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/175eb15370.js" crossorigin="anonymous"></script>
+    <script src="tipoCambio.js"></script>
+    <style>
+        .imagenVendido.seleccionado {
+            border: 10px solid red;
+            /* Puedes ajustar el estilo del borde según tus preferencias */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="barraNavegador" class="navegador">
+        <img src="IMG/COSITICACR.png" alt="Icono"> <!-- Ruta de tu imagen -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container">
+                <a class="navbar-brand" href="#">CositicasCR</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">QUIENES SOMOS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                PRODUCTOS
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="dulces.html">DULCES</a></li>
+                                <li><a class="dropdown-item" href="salud.html">SALUD</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="masVendido.html">LOS MAS VENDIDOS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contactenos.html">CONTACTENOS</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" action="https://www.google.com/search" method="GET"
+                        target="_blank">
+                        <input class="form-control me-2" type="search" placeholder="Buscar en Google"
+                            aria-label="Search" name="q">
+                        <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="tituloGaleria">
+        <h1>LO MAS VENDIDO</h1>
+    </div>
+
+    <header class="container" id="TodasLoMasVendido">
+        <div class="col-xl-12 col-xs-12" id="vendido">
+            <div class="flex-direction-flexFlow">
+                <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                    <p>DUNKING HAZELNUT</p>
+                    <img src="IMG/dunking.png" alt="imgSalud">
+                    <p1>PRECIO $9 <input type="number" data-precio="9" id="cantidadProductos1"
+                            style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                </div>
+                <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                    <p>DUNKING CARAMEL</p>
+                    <img src="IMG/dunkingcaramel.png" alt="imgSalud">
+                    <p1>PRECIO $10.5 <input type="number" data-precio="10.5" id="cantidadProductos2"
+                            style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                </div>
+                <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                    <p>ICE TEA ZERO SUGAR 12 BOTELLAS</p>
+                    <img src="IMG/icetea.png" alt="imgSalud">
+                    <p1>PRECIO $22 <input type="number" data-precio="22" id="cantidadProductos3"
+                            style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                </div>
+
+            </div>
+            <div class="col-xl-12 col-xs-12" id="vendido">
+                <div class="flex-direction-flexFlow">
+                    <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                        <p>PIE CRUSTS DEEP DISH</p>
+                        <img src="IMG/pieCrust.png" alt="imgSalud">
+                        <p1>PRECIO $4 <input type="number" data-precio="4" id="cantidadProductos4"
+                                style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                    </div>
+                    <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                        <p>PUMPKIN PIE</p>
+                        <img src="IMG/readybake.png" alt="imgSalud">
+                        <p1>PRECIO $8 <input type="number" data-precio="8" id="cantidadProductos5"
+                                style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                    </div>
+                    <div class="imagenVendido" onclick="toggleSeleccion(this)">
+                        <p>REESE'S PEANUT BUTTER SANDWICH</p>
+                        <img src="IMG/reeses.png" alt="imgSalud">
+                        <p1>PRECIO $15 <input type="number" data-precio="15" id="cantidadProductos6"
+                                style="width: 60px; max-width: 100%;height: 30px;"></p1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="whatsapp-icon" onclick="generarEnlaceWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <script>
+        function toggleSeleccion(elemento) {
+            elemento.classList.toggle('seleccionado');
+        }
+
+        function obtenerTipoCambio() {
+            return new Promise((resolve, reject) => {
+                fetch('https://tipodecambio.paginasweb.cr/api')
+                    .then(response => response.json())
+                    .then(data => resolve(data.compra)) // Cambié a 'compra' porque es probable que desees el tipo de cambio de compra
+                    .catch(error => reject(error));
+            });
+        }
+
+        function generarEnlaceWhatsApp() {
+            var productosSeleccionados = [];
+
+            // Obtener productos seleccionados
+            var elementosSeleccionados = document.querySelectorAll('.imagenVendido.seleccionado');
+            elementosSeleccionados.forEach(function (elemento) {
+                var nombreProducto = elemento.querySelector('p').textContent;
+                var cantidadInput = elemento.querySelector('input');
+                var cantidad = parseFloat(cantidadInput.value) || 1; // Obtener valor del input, valor predeterminado 1 si no se especifica
+                var precioProducto = parseFloat(cantidadInput.dataset.precio) || 0; // Obtener precio del input
+                productosSeleccionados.push({ nombre: nombreProducto, cantidad: cantidad, precio: precioProducto });
+            });
+
+            if (productosSeleccionados.length > 0) {
+                // Construir el texto con la lista de productos y precios
+                var textoListaProductos = 'Tengo interés en estos productos:\n';
+                productosSeleccionados.forEach(function (producto) {
+                    var precioTotalProducto = producto.cantidad * producto.precio;
+                    textoListaProductos += `${producto.nombre} - Cantidad: ${producto.cantidad} - Precio Unitario: $${producto.precio.toFixed(2)} - Precio Total: $${precioTotalProducto.toFixed(2)}\n`;
+                });
+
+                // Obtener el tipo de cambio
+                obtenerTipoCambio()
+                    .then(tipoCambio => {
+                        // Verificar si el tipo de cambio es un número válido
+                        if (isNaN(tipoCambio) || tipoCambio <= 0) {
+                            throw new Error('Tipo de cambio inválido. Por favor, verifica el valor obtenido.');
+                        }
+
+                        // Calcular la suma total en dólares
+                        var sumaTotalDolares = productosSeleccionados.reduce(function (total, producto) {
+                            return total + producto.cantidad * producto.precio;
+                        }, 0);
+
+                        // Calcular la suma total en colones
+                        var sumaTotalColones = sumaTotalDolares * tipoCambio;
+
+                        // Agregar la suma total en dólares y colones al texto
+                        textoListaProductos += `\nTotal en Dólares: $${sumaTotalDolares.toFixed(2)}\n`;
+                        textoListaProductos += `Total en Colones: ₡${sumaTotalColones.toLocaleString('es-CR', { style: 'currency', currency: 'CRC' })}\n`;
+
+                        // Generar el enlace de WhatsApp con el texto de la lista
+                        var enlaceWhatsApp = `https://wa.me/50670157905?text=${encodeURIComponent(textoListaProductos)}`;
+
+                        // Abrir el enlace de WhatsApp en una nueva ventana
+                        window.open(enlaceWhatsApp, '_blank');
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener o procesar el tipo de cambio:', error);
+                        alert('Error al obtener o procesar el tipo de cambio. Intenta nuevamente.');
+                    });
+            } else {
+                alert('Selecciona al menos un producto antes de generar el enlace de WhatsApp.');
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class=" border_top1"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Metodos de Pago</h3>
+                        <ul class="link_menu">
+                            <li>Sinpe Movil: 7015 7905</li>
+                            <li>Tranferencia Bancaria</li>
+                            <li>Efectivo</li>
+                        </ul>
+                    </div>
+                    <div class=" col-md-4">
+                        <h3>Cositicas CR</h3>
+                        <p class="historia">
+
+                            Somos una empresa joven y fresca, con un enfoque de brindar productos de calidad, diseño y
+                            exclusivos .
+                            Nuestra misión es ofrecer ropa que inspire a las personas a sentirse seguras , y proveemos
+                            productos americanos en Costa Rica .
+                            <span>¡Gracias por tu apoyo!</span>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contácto</h3>
+                        <ul class="contacto">
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Ubicacion</li>
+                            <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#">
+                                    ecenteno08@hotmail.com </a></li>
+                            <li><i class="fa fa-mobile" aria-hidden="true"></i> Teléfono : +506 7015 7905</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="redesSociales" class="col-md-12">
+                        <nav class="nav-footer">
+                            <ul class="list-inline" id="list-link">
+                                <li class="list-inline-item">
+                                    <a href="index.html">INICIO</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="nosotros.html">QUIENES SOMOS</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="index.html">PRODUCTOS</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="contactenos.html">CONTACTENOS</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="socials-a">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/profile.php?id=61551538207726&mibextid=LQQJ4d">
+                                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://instagram.com/cosititicascr?igshid=OGQ5ZDc2ODk2ZA==habiamos">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://wa.me/50670157905">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tipoCambioInfo" class="container"></div>
+                    </div>
+                    <div class="copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 offset-md-1">
+                                    <p>© 2022 Derechos de autor reservados. Diseñado por <a href="me.html">Jonathan
+                                            Centeno</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+</body>
+
+</html>

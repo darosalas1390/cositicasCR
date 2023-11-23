@@ -1,0 +1,143 @@
+.flex-direction-flexFlow {
+    display: flex;
+    flex-flow: row wrap;
+  
+  }
+  
+  
+  
+  .flex-direction-flexFlow>.imagenSalud {
+    display: flex;
+    flex-direction: column;
+    width: 300PX;
+    height: 400px;
+    max-height: 400px;
+    max-width: 300px;
+    line-height: 75px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)) 0;
+    box-shadow: 0 0 50px rgba(102, 204, 255, 0.9), 0 0 50px rgba(102, 204, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Ajusta el valor de "0.8" para cambiar la opacidad */
+    border-radius: 50px;
+  
+  }
+  
+  .flex-direction-flexFlow>.imagenSalud:hover {
+    display: flex;
+    flex-direction: column;
+    width: 302PX;
+    height: 402px;
+    max-height: 402px;
+    max-width: 302px;
+    line-height: 75px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)) 0;
+    box-shadow: 0 0 50px rgba(102, 204, 255, 0.9), 0 0 50px rgba(102, 204, 255, 0.5);
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Ajusta el valor de "0.8" para cambiar la opacidad */
+    border-radius: 50px;
+    transform: scale(1.1);
+    /* Hace que la imagen se haga un poco más grande al pasar el mouse por encima */
+  
+  }
+  
+  
+  #tituloGaleria h1 {
+    color: #ff5f40;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #TodasLosMedicamentos p {
+    color: white;
+    text-align: center;
+  }
+
+  #TodasLosMedicamentos p1 {
+    color: white;
+    text-align: center;
+  }
+  
+  .imagenSalud{
+    position: relative;
+    align-items: center;
+  
+  }
+  
+  .imagenSalud img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 50px;
+    height: 360px;
+   }
+  
+  
+  .imagenSalud p {
+    position: absolute;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-size: 20px;
+  
+  }
+  .imagenSalud p1 {
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-size: 20px;
+   }
+  
+  .flex-direction-flexFlow {
+    margin-bottom: 60px;
+  }
+  
+  
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .imagenSalud {
+    animation: slideIn 3s ease-in-out;
+  }
+  
+  
+  
+  @media screen and (max-width:768px) {
+  
+    #TodasLosMedicamentos {
+      margin-bottom: 60px;
+    }
+  
+    #tituloGaleria h1 {
+      color: #ff5f40;
+      margin-top: 20px;
+      text-align: center;
+      margin-left: 0%;
+    }
+  
+  }
+
+  #whatsapp-icon {
+    font-size: 70px; /* Ajusta el tamaño del icono según tus preferencias */
+    color: green; /* Cambia el color del icono según tus preferencias */
+    cursor: pointer;
+    text-align: center;
+}
