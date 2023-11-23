@@ -27,14 +27,14 @@ header{
 
 
 .aparicion-izquierda-derecha {
-    animation: aparicionIzquierdaDerecha 1s ease-in-out; /* Ajusta la duración a tu preferencia */
+    animation: aparicionIzquierdaDerecha 1s ease-in-out; 
 }
 
 @keyframes aparicionIzquierdaDerecha {
     from {
-        transform: translateX(-100%); /* Desplazamiento desde la izquierda al principio */
+        transform: translateX(-100%); 
     }
     to {
-        transform: translateX(0); /* Sin desplazamiento al final */
+        transform: translateX(0); 
     }
 }
