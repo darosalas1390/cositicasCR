@@ -22,7 +22,7 @@
     <style>
         .imagenSalud.seleccionado {
             border: 10px solid red;
-            /* Puedes ajustar el estilo del borde según tus preferencias */
+            
         }
     </style>
 
@@ -31,7 +31,7 @@
 <body>
 
     <div id="barraNavegador" class="navegador">
-        <img src="IMG/COSITICACR.png" alt="Icono"> <!-- Ruta de tu imagen -->
+        <img src="IMG/COSITICACR.png" alt="Icono">
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container">
                 <a class="navbar-brand" href="#">CositicasCR</a>
@@ -153,7 +153,7 @@
             return new Promise((resolve, reject) => {
                 fetch('https://tipodecambio.paginasweb.cr/api')
                     .then(response => response.json())
-                    .then(data => resolve(data.compra)) // Cambié a 'compra' porque es probable que desees el tipo de cambio de compra
+                    .then(data => resolve(data.compra)) 
                     .catch(error => reject(error));
             });
         }
@@ -166,43 +166,43 @@
             elementosSeleccionados.forEach(function (elemento) {
                 var nombreProducto = elemento.querySelector('p').textContent;
                 var cantidadInput = elemento.querySelector('input');
-                var cantidad = parseFloat(cantidadInput.value) || 1; // Obtener valor del input, valor predeterminado 1 si no se especifica
-                var precioProducto = parseFloat(cantidadInput.dataset.precio) || 0; // Obtener precio del input
+                var cantidad = parseFloat(cantidadInput.value) || 1;
+                var precioProducto = parseFloat(cantidadInput.dataset.precio) || 0; 
                 productosSeleccionados.push({ nombre: nombreProducto, cantidad: cantidad, precio: precioProducto });
             });
 
             if (productosSeleccionados.length > 0) {
-                // Construir el texto con la lista de productos y precios
+                
                 var textoListaProductos = 'Tengo interés en estos productos:\n';
                 productosSeleccionados.forEach(function (producto) {
                     var precioTotalProducto = producto.cantidad * producto.precio;
                     textoListaProductos += `${producto.nombre} - Cantidad: ${producto.cantidad} - Precio Unitario: $${producto.precio.toFixed(2)} - Precio Total: $${precioTotalProducto.toFixed(2)}\n`;
                 });
 
-                // Obtener el tipo de cambio
+                
                 obtenerTipoCambio()
                     .then(tipoCambio => {
-                        // Verificar si el tipo de cambio es un número válido
+                        
                         if (isNaN(tipoCambio) || tipoCambio <= 0) {
                             throw new Error('Tipo de cambio inválido. Por favor, verifica el valor obtenido.');
                         }
 
-                        // Calcular la suma total en dólares
+                       
                         var sumaTotalDolares = productosSeleccionados.reduce(function (total, producto) {
                             return total + producto.cantidad * producto.precio;
                         }, 0);
 
-                        // Calcular la suma total en colones
+                       
                         var sumaTotalColones = sumaTotalDolares * tipoCambio;
 
-                        // Agregar la suma total en dólares y colones al texto
+                        
                         textoListaProductos += `\nTotal en Dólares: $${sumaTotalDolares.toFixed(2)}\n`;
                         textoListaProductos += `Total en Colones: ₡${sumaTotalColones.toLocaleString('es-CR', { style: 'currency', currency: 'CRC' })}\n`;
 
-                        // Generar el enlace de WhatsApp con el texto de la lista
+                       
                         var enlaceWhatsApp = `https://wa.me/50670157905?text=${encodeURIComponent(textoListaProductos)}`;
 
-                        // Abrir el enlace de WhatsApp en una nueva ventana
+                        
                         window.open(enlaceWhatsApp, '_blank');
                     })
                     .catch(error => {
