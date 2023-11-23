@@ -129,15 +129,7 @@
     text-align: left;
     color: white;
   }
-  .footer {
-      font-family: Georgia, "Times New Roman", Times, serif;
-      text-align: left;
-      color: rgb(158, 103, 48);
-      border-top: 1px solid rgb(172, 55, 110);
-      border-bottom: 1px solid rgb(172, 55, 110);
-      background: pink;
-      padding: 25px;
-  }
+ 
 
   .contacto, .historia, .link_menu{
     margin-top: 25px;
