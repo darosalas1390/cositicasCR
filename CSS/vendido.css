@@ -137,10 +137,30 @@
 }
 
 #whatsapp-icon {
-  font-size: 70px;
-  /* Ajusta el tamaño del icono según tus preferencias */
-  color: green;
-  /* Cambia el color del icono según tus preferencias */
+  font-size: 70px; /* Ajusta el tamaño del icono según tus preferencias */
+  color: green; /* Cambia el color del icono según tus preferencias */
   cursor: pointer;
   text-align: center;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+  right: 50%; /* Centra el icono horizontalmente */
+  z-index: 999; /* Asegura que el icono esté por encima de otros elementos */
+}
+
+
+@media screen and (max-width: 768px) {
+/* Estilos específicos para dispositivos móviles */
+
+.flex-direction-flexFlow>.imagenVendido:hover {
+    width: 80%;
+    max-width: 250px; /* Reduzco aún más el máximo para pantallas más pequeñas */
+    height: auto;
+    margin: 0 auto;
+    transform: scale(1.1);
+}
+
+#whatsapp-icon {
+    font-size: 30px; /* Ajusta el tamaño del icono para dispositivos móviles */
+    bottom: 20px;
+    right: 20px;
+}
 }
