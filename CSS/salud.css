@@ -161,5 +161,6 @@
       font-size: 30px; /* Ajusta el tamaño del icono para dispositivos móviles */
       bottom: 20px;
       right: 20px;
+      z-index: 999; /* Asegura que el icono esté por encima de otros elementos */
   }
 }
