@@ -212,6 +212,12 @@
     .navbar-nav li {
         margin: 0 5px; 
     }
+      .map {
+      max-width: 100%;
+  }
+  
+  .map iframe {
+      width: 100%;
 }
 
 
